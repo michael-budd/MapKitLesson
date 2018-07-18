@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FEl-xI-y7R">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="F1f-GH-gWj">
+            <objects>
+                <viewController id="FEl-xI-y7R" customClass="MapViewController" customModule="MapKitExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xHK-rI-l43">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QKq-3Z-Agd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="444.5"/>
+                            </mapView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c1C-E7-tmT">
+                                <rect key="frame" x="0.0" y="452" width="375" height="215"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="monumentCell" id="rcH-jv-2ke">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rcH-jv-2ke" id="uyL-9q-9aw">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QKq-3Z-Agd" firstAttribute="centerX" secondItem="Ue1-TG-JPZ" secondAttribute="centerX" id="Awp-sn-Z2K"/>
+                            <constraint firstItem="c1C-E7-tmT" firstAttribute="bottom" secondItem="Ue1-TG-JPZ" secondAttribute="bottom" id="Hm5-Mp-dsi"/>
+                            <constraint firstItem="c1C-E7-tmT" firstAttribute="width" secondItem="xHK-rI-l43" secondAttribute="width" id="Ns6-AK-BXI"/>
+                            <constraint firstItem="QKq-3Z-Agd" firstAttribute="width" secondItem="xHK-rI-l43" secondAttribute="width" id="Owt-Yd-Rp8"/>
+                            <constraint firstItem="c1C-E7-tmT" firstAttribute="leading" secondItem="Ue1-TG-JPZ" secondAttribute="leading" id="SVX-8x-Ikl"/>
+                            <constraint firstItem="c1C-E7-tmT" firstAttribute="centerX" secondItem="Ue1-TG-JPZ" secondAttribute="centerX" id="eWW-L2-cIa"/>
+                            <constraint firstItem="QKq-3Z-Agd" firstAttribute="top" secondItem="xHK-rI-l43" secondAttribute="top" id="g6f-I5-iqq"/>
+                            <constraint firstItem="c1C-E7-tmT" firstAttribute="top" secondItem="QKq-3Z-Agd" secondAttribute="bottom" constant="8" id="hga-iD-gbj"/>
+                            <constraint firstItem="c1C-E7-tmT" firstAttribute="trailing" secondItem="Ue1-TG-JPZ" secondAttribute="trailing" id="kdJ-lH-rIe"/>
+                            <constraint firstItem="QKq-3Z-Agd" firstAttribute="height" secondItem="xHK-rI-l43" secondAttribute="height" multiplier="2/3" id="mr3-WF-f3Q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ue1-TG-JPZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="QKq-3Z-Agd" id="Hmt-3z-r1R"/>
+                        <outlet property="tableView" destination="c1C-E7-tmT" id="K03-wn-DTT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OS2-zl-X0b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-90.400000000000006" y="189.3553223388306"/>
+        </scene>
+    </scenes>
+</document>
